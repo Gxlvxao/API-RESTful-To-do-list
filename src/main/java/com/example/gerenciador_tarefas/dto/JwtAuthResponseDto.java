@@ -1,4 +1,4 @@
-package gerenciador_tarefas.dto;
+package com.example.gerenciadortarefas.dto; 
 
 import lombok.Data;
 
@@ -6,6 +6,7 @@ import lombok.Data;
 public class JwtAuthResponseDto {
     private String accessToken;
     private String tokenType = "Bearer";
+
     public JwtAuthResponseDto(String accessToken) {
         this.accessToken = accessToken;
     }

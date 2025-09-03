@@ -21,11 +21,12 @@ public class JwtTokenProvider {
         Date now = new Date();
         Date expiryDate = new Date(now.getTime() + jwtExpirationInMs);
 
+        // A sintaxe correta que o compilador espera está nesta linha abaixo:
         return Jwts.builder()
                 .subject(username)
                 .issuedAt(now)
                 .expiration(expiryDate)
-                .signWith(jwtSecret)
+                .signWith(jwtSecret) // Apenas a chave, sem o algoritmo antigo
                 .compact();
     }
 

@@ -1,13 +1,14 @@
-package gerenciador_tarefas.service;
+package com.example.gerenciadortarefas.service; 
 
-import gerenciador_tarefas.dto.UsuarioRequestDto;
-import gerenciador_tarefas.model.Usuario;
-import gerenciador_tarefas.repository.UsuarioRepository;
+import com.example.gerenciadortarefas.dto.UsuarioRequestDto; 
+import com.example.gerenciadortarefas.model.Usuario; 
+import com.example.gerenciadortarefas.repository.UsuarioRepository; 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
 public class UsuarioService {
+
     private final UsuarioRepository usuarioRepository;
     private final PasswordEncoder passwordEncoder;
 
