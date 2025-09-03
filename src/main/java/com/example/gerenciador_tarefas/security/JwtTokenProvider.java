@@ -1,4 +1,4 @@
-package gerenciador_tarefas.security;
+package com.example.gerenciadortarefas.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -12,10 +12,9 @@ import java.util.Date;
 @Component
 public class JwtTokenProvider {
 
-    
     private final SecretKey jwtSecret = Keys.secretKeyFor(Jwts.SIG.HS512);
 
-    private final long jwtExpirationInMs = 604800000L; // 7 dias
+    private final long jwtExpirationInMs = 604800000L;
 
     public String generateToken(Authentication authentication) {
         String username = authentication.getName();
@@ -26,7 +25,7 @@ public class JwtTokenProvider {
                 .subject(username)
                 .issuedAt(now)
                 .expiration(expiryDate)
-                .signWith(jwtSecret) 
+                .signWith(jwtSecret)
                 .compact();
     }
 
@@ -48,8 +47,7 @@ public class JwtTokenProvider {
                 .parseSignedClaims(authToken);
             return true;
         } catch (Exception ex) {
-            
+            return false;
         }
-        return false;
     }
 }

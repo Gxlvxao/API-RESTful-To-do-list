@@ -1,4 +1,4 @@
-package com.example.gerenciadortarefas.dto;
+package gerenciador_tarefas.dto;
 
 import lombok.Data;
 

@@ -1,20 +1,18 @@
-package com.example.gerenciadortarefas.service;
+package gerenciador_tarefas.service;
 
-import com.example.gerenciadortarefas.dto.TarefaDto;
-import com.example.gerenciadortarefas.model.Tarefa;
-import com.example.gerenciadortarefas.model.Usuario;
-import com.example.gerenciadortarefas.repository.TarefaRepository;
-import com.example.gerenciadortarefas.repository.UsuarioRepository;
+import gerenciador_tarefas.dto.TarefaDto;
+import gerenciador_tarefas.model.Tarefa;
+import gerenciador_tarefas.model.Usuario;
+import gerenciador_tarefas.repository.TarefaRepository;
+import gerenciador_tarefas.repository.UsuarioRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
 public class TarefaService {
-
     private final TarefaRepository tarefaRepository;
     private final UsuarioRepository usuarioRepository;
 

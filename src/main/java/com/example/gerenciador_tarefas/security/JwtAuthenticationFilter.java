@@ -1,4 +1,4 @@
-package com.example.gerenciadortarefas.security;
+package gerenciador_tarefas.security; 
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

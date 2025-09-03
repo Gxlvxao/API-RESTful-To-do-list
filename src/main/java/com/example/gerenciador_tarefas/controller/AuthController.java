@@ -1,8 +1,8 @@
-package com.example.gerenciadortarefas.controller;
+package gerenciador_tarefas.controller; 
 
-import com.example.gerenciadortarefas.dto.JwtAuthResponseDto;
-import com.example.gerenciadortarefas.dto.LoginRequestDto;
-import com.example.gerenciadortarefas.security.JwtTokenProvider;
+import gerenciador_tarefas.dto.JwtAuthResponseDto;
+import gerenciador_tarefas.dto.LoginRequestDto;
+import gerenciador_tarefas.security.JwtTokenProvider; 
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
